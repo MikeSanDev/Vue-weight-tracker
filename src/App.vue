@@ -21,6 +21,22 @@ const addWeight = () => {
     })
 }
 
+watch(weights, newWeights => {
+    const ws = [...newWeights]
+nextTick(() => {
+    weightChart.value = new Chart(weightChartElement.value.getContext('2d'), {
+        type: 'line',
+        data: {
+            labels: ws
+            .sort((a, b) => a.date - b.date)
+            .map(w => new Date(w.date).toLocaleDateString()),
+        }
+    })
+})
+
+    console.log(ws)
+}, {deep: true})
+
 </script>
 
 <template>
