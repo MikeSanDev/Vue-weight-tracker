@@ -1,6 +1,6 @@
-#Weight Tracker Vue Application
+# Weight Tracker Vue Application
 
-###Learning to create a weight tracker app using the Vue framework! 
+### Learning to create a weight tracker app using the Vue framework! 
 
 # Vue 3 + Vite
 
