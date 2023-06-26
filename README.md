@@ -1,6 +1,7 @@
 # Weight Tracker Vue Application
 
 ### Learning to create a weight tracker app using the Vue framework! 
+*Original Code from Tyler Potts  - changed styling and added more features such as state management and chart updates.
 
 # Vue 3 + Vite
 
