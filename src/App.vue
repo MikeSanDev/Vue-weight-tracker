@@ -53,8 +53,8 @@ watch(weights, newWeights => {
                         data: ws
                             .sort((a, b) => a.date - b.date)
                             .map(w => w.weight),
-                            backgroundColor: '#fd9591',
-                            borderColor: '#f6d9b1',
+                            backgroundColor: '#f6d9b1',
+                            borderColor: '#fd9591 ',
                             borderWidth: 2,
                             fill: true
                     }
@@ -86,7 +86,7 @@ watch(weights, newWeights => {
             <input type="number" step="0.1" v-model="weightInput"/>
             <input type="submit" value="Add Weight"/>
         </form>
-        <div v-if="weights && weights.length > 0">
+        <div class="history-box" v-if="weights && weights.length > 0">
             <h2>Last 7 Days</h2>
 
             <div class="canvas-box">
@@ -98,9 +98,9 @@ watch(weights, newWeights => {
                     <ul>
                         <li v-for="weight in weights">
                             <span>
-                                {{  weight.weight }}lbs
+                                {{  weight.weight }}lbs |
                             </span>
-                            <small>
+                            <small class="history-date">
                                 {{  new Date(weight.date).toLocaleDateString() }}
                             </small>
                         </li>    
@@ -130,6 +130,7 @@ h1 {
 	font-size: 2em;
 	text-align: center;
 	margin-bottom: 2rem;
+    
 }
 
 h2 {
@@ -151,7 +152,7 @@ h2 {
 	background-color: white;
 	border-radius: 999px;
 	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-	border: 5px solid hwb(330 41% 0%);
+	border: 5px solid #f6d9b1;
 	
 	margin: 0 auto 2rem;
 }
@@ -179,7 +180,7 @@ form {
 
 form:focus-within,
 form:hover {
-	border-color: hotpink;
+	border-color: #f6d9b1;
 	border-width: 2px;
 }
 
@@ -199,7 +200,7 @@ form input[type="submit"] {
 	outline: none;
 	border: none;
 	cursor: pointer;
-	background-color: hotpink;
+	background-color: #fd9591;
 
 	padding: 0.5rem 1rem;
 
@@ -212,10 +213,15 @@ form input[type="submit"] {
 
 form input[type="submit"]:hover {
 	background-color: white;
-	color: hotpink;
-	border-left-color: hotpink;
+	color: #fd9591;
+	border-left-color: #f6d9b1;
 }
 
+.history-box{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
 .canvas-box {
 	width: 100%;
 	max-width: 720px;
@@ -232,6 +238,9 @@ form input[type="submit"]:hover {
 	margin: 0;
 }
 
+.history-date {
+    font-size: 17px;
+}
 .weight-history ul li {
 	display: flex;
 	justify-content: space-between;
