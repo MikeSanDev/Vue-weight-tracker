@@ -5,10 +5,10 @@ import Chart from 'chart.js/auto';
 const weights = ref([])
 
 const weightChartEl = ref(null)
-
 const weightChart = shallowRef(null)
 
-const weightInput = ref(180.00)
+const weightInput = ref(localStorage.getItem('weightInput') || 180.00)
+
 
 const currentWeight = computed(() => {
     return weights.value.sort((a, b) => b.date - a.date)[0] || { weight: 0}
@@ -18,12 +18,13 @@ const addWeight = () => {
     weights.value.push({
         weight: weightInput.value,
         date: new Date().getTime()
-    })
-}
+    });
+    localStorage.setItem('weights', JSON.stringify(weights.value))
+};
 
 watch(weights, newWeights => {
     const ws = [...newWeights]
-
+    localStorage.setItem('weights', JSON.stringify(ws))
     if (weightChart.value) {
         weightChart.value.data.labels = ws
         .sort((a, b) => a.date - b.date)
@@ -69,7 +70,15 @@ watch(weights, newWeights => {
 
         console.log(ws)
     }, {deep: true})
+    
+    watch(weightInput, newValue => {
+        localStorage.setItem('weightInput', newValue)
+        })
 
+        // Retrieve stored data on component mount
+        if (localStorage.getItem('weights')) {
+        weights.value = JSON.parse(localStorage.getItem('weights'))
+        }
 </script>
 
 <template>
@@ -108,6 +117,7 @@ watch(weights, newWeights => {
             <td>{{ new Date(weight.date).toLocaleDateString() }}</td>
             </tr>
         </tbody>
+        
     </table>
             </div>
         </div>
