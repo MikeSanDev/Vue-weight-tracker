@@ -93,18 +93,22 @@ watch(weights, newWeights => {
                 <canvas ref='weightChartEl'></canvas>
             </div>
 
-            <div>
+            <div class="history-div">
                 <h2>Weight History</h2>
-                    <ul>
-                        <li v-for="weight in weights">
-                            <span>
-                                {{  weight.weight }}lbs |
-                            </span>
-                            <small class="history-date">
-                                {{  new Date(weight.date).toLocaleDateString() }}
-                            </small>
-                        </li>    
-                    </ul>
+                <table>
+        <thead>
+            <tr>
+            <th>Weight (lbs)</th>
+            <th>Date</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr v-for="weight in weights" :key="weight.date">
+            <td>{{ weight.weight }}lbs</td>
+            <td>{{ new Date(weight.date).toLocaleDateString() }}</td>
+            </tr>
+        </tbody>
+    </table>
             </div>
         </div>
     </main>
@@ -232,44 +236,21 @@ form input[type="submit"]:hover {
 	margin-bottom: 2rem;
 }
 
-.weight-history ul {
-	list-style: none;
-	padding: 0;
-	margin: 0;
-}
-
 .history-date {
     font-size: 17px;
 }
-.weight-history ul li {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	padding: 0.5rem;
-	cursor: pointer;
+.history-div{
+
+    text-align: center;
+}
+table {
+  border-collapse: collapse;
+  width: 100%;
 }
 
-.weight-history ul li:nth-child(even) {
-	background-color: #dfdfdf;
-}
-
-.weight-history ul li:hover {
-	background-color: #f8f8f8;
-}
-
-.weight-history ul li:last-of-type {
-	border-bottom: none;
-}
-
-.weight-history ul li span {
-	display: block;
-	font-size: 1.25rem;
-	font-weight: 700;
-	margin-right: 1rem;
-}
-
-.weight-history ul li small {
-	color: #888;
-	font-style: italic;
+th,
+td {
+  padding: 8px;
+  border: 1px solid black;
 }
 </style>
