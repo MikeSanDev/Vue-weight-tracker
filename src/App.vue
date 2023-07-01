@@ -25,6 +25,12 @@ const addWeight = () => {
 watch(weights, newWeights => {
     const ws = [...newWeights]
     localStorage.setItem('weights', JSON.stringify(ws))
+    if (newWeights.length === 0 && weightChart.value) {
+        weightChart.value.destroy();
+        weightChart.value = null;
+        return;
+    }
+    
     if (weightChart.value) {
         weightChart.value.data.labels = ws
         .sort((a, b) => a.date - b.date)
@@ -79,6 +85,14 @@ watch(weights, newWeights => {
         if (localStorage.getItem('weights')) {
         weights.value = JSON.parse(localStorage.getItem('weights'))
         }
+
+         const resetData = () => {
+        weights.value = []; // Reset the weights array
+        localStorage.removeItem('weights'); // Remove the weights from localStorage
+        weightChart.value.destroy(); // Destroy the chart instance
+        weightChart.value = null; // Reset the chart reference
+    };
+
 </script>
 
 <template>
@@ -119,6 +133,7 @@ watch(weights, newWeights => {
         </tbody>
         
     </table>
+    <button @click="resetData">Reset</button> <!-- Add reset button -->
             </div>
         </div>
     </main>
