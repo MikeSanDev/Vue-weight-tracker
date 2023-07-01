@@ -30,7 +30,7 @@ watch(weights, newWeights => {
         weightChart.value = null;
         return;
     }
-    
+
     if (weightChart.value) {
         weightChart.value.data.labels = ws
         .sort((a, b) => a.date - b.date)
@@ -133,7 +133,7 @@ watch(weights, newWeights => {
         </tbody>
         
     </table>
-    <button @click="resetData">Reset</button> <!-- Add reset button -->
+    <button class="reset-btn" @click="resetData">Reset</button> <!-- Add reset button -->
             </div>
         </div>
     </main>
@@ -246,6 +246,43 @@ form input[type="submit"]:hover {
 	border-left-color: #f6d9b1;
 }
 
+.reset-btn {
+	appearance: none;
+	outline: none;
+	border: none;
+	background-color: white;
+
+	flex: 1 1 0%;
+	padding: 1rem 1.5rem;
+	font-size: 1.25rem;
+}
+
+.reset-btn {
+	appearance: none;
+	outline: none;
+	border: none;
+	cursor: pointer;
+	background-color: #fd9591;
+
+	padding: 0.5rem 1rem;
+
+	color: white;
+	font-size: 1.25rem;
+	font-weight: 700;
+	transition: 200ms linear;
+	border: 3px solid transparent;
+	border: 3px solid transparent;
+    margin-top: 20px;
+    border-radius: 0.3rem;
+	overflow: hidden;
+	transition: 200ms linear;
+}
+
+.reset-btn:hover {
+	background-color: white;
+	color: #fd9591;
+	border-color: #f6d9b1;
+}
 .history-box{
     display: flex;
     align-items: center;
