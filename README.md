@@ -6,6 +6,9 @@
 ## Home Page
 ![wt-1](https://github.com/MikeSanDev/Vue-weight-tracker/assets/96930354/38d4a430-a6aa-4dc0-8229-ed640f407686)
 
+## Adding Weights to the Weight Chart
+![wt-2](https://github.com/MikeSanDev/Vue-weight-tracker/assets/96930354/0419b7e1-2151-4d45-bb91-ae20234dfc94)
+
 
 # Vue 3 + Vite
 
