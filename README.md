@@ -9,7 +9,7 @@
 ## Adding Weights to the Weight Chart
 ![wt-2](https://github.com/MikeSanDev/Vue-weight-tracker/assets/96930354/0419b7e1-2151-4d45-bb91-ae20234dfc94)
 
-## Reset Button
+## Weight History and Reset Button
 ![wt-3](https://github.com/MikeSanDev/Vue-weight-tracker/assets/96930354/5a70d721-71cc-442e-b26f-6c34580103da)
 
 
