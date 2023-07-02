@@ -1,7 +1,7 @@
 # Weight Tracker Vue Application
 
-### Learned how to create a weight tracker app using the Vue framework! 
-*Original Code from Tyler Potts (youtube) - changed styling and added more features such as state management. I am planning on deploying it through Netlify for my personal use.
+### I learned how to create a weight tracker app using the Vue framework! 
+*Learned from Tyler Potts (youtube) - This was only to learn the foundations of Vue. Once I got a good grasp of it, I then changed the styling and added more features such as state management and added a reset button. I may plan to create a login and registration to create users that can store their weight history. I also am planning on deploying it through Netlify for my personal use.
 
 # Vue 3 + Vite
 
