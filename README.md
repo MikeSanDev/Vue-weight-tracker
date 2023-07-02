@@ -3,6 +3,10 @@
 ### I learned how to create a weight tracker app using the Vue framework! 
 * Learned from Tyler Potts (youtube) - This was only to learn the foundations of Vue. Once I got a good grasp of it, I then changed the styling and added more features such as state management and added a reset button. I may plan to create a login and registration to create users that can store their weight history. I also am planning on deploying it through Netlify for my personal use.
 
+## Home Page
+![wt-1](https://github.com/MikeSanDev/Vue-weight-tracker/assets/96930354/38d4a430-a6aa-4dc0-8229-ed640f407686)
+
+
 # Vue 3 + Vite
 
 This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
