@@ -1,6 +1,6 @@
 # Weight Tracker Vue Application
 
-### A one page weight tracker application.  I wanted to learn the foundations of Vue as a framework. I followed the start of a into to Vue.js Course on you tube by a developer named Tyler Potts. Once I got a good grasp of the framework, I then changed the styling and added more features such as state management and added a reset button. I may plan to create a login and registration to create users that can store their weight history. I also am planning on deploying it through Netlify for my personal use.
+This is my one page weight tracker application.  I wanted to learn the foundations of Vue as a framework. I followed the start of a into to Vue.js Course on you tube by a developer named Tyler Potts. Once I got a good grasp of the framework, I then changed the styling and added more features such as state management and added a reset button. I may plan to create a login and registration to create users that can store their weight history. I also am planning on deploying it through Netlify for my personal use.
 
 ## Home Page
 ![wt-1](https://github.com/MikeSanDev/Vue-weight-tracker/assets/96930354/38d4a430-a6aa-4dc0-8229-ed640f407686)
